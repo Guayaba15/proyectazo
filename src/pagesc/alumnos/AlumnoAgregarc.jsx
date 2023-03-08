@@ -47,7 +47,7 @@ function AlumnoAgregarc() {
       <Container>
         <Row>
           <Col>
-            <h1>PTC agregar</h1>
+            <h1 style={{textAlign:'center', marginTop:'20px'}}>Agregar actividad</h1>
           </Col>
         </Row>
 
@@ -71,29 +71,35 @@ function AlumnoAgregarc() {
             </Col>
 
             <Col>
-              <Form.Control
-                name="nombre"
-                type="text"
-                placeholder="Ingresa nombre"
-                value = { nombre }
-                onChange = { handleInputChangec }
-                required
-              />
+            <FloatingLabel label="Ingresa tu nombre">
+            {" "}
+            <Form.Control
+              name="nombre"
+              type="text"
+              placeholder="Ingresa tu nombre"
+              value = {nombre}
+              onChange = {handleInputChangec}
+              required
+            />
+            </FloatingLabel>
             </Col>
           </Row>
 
           <Row className="mt-3 mb-3">
             <Col>
+            <FloatingLabel label="Ingresa el nombre de la actividad">
               <Form.Control
                 name="act"
                 type="text"
-                placeholder="Ingresa la actividad"
+                placeholder="Ingresa el nombre de la actividad"
                 value={ act }
                 onChange = { handleInputChangec }
               />
+            </FloatingLabel>
             </Col>
 
             <Col>
+            <FloatingLabel label="Ingresa la fecha">
               <Form.Control
                 name="fecha"
                 type="date"
@@ -101,10 +107,12 @@ function AlumnoAgregarc() {
                 value={ fecha }
                 onChange = { handleInputChangec }
               />
+            </FloatingLabel>
             </Col>
           </Row>
           <Row className="mt-3 mb-3">
             <Col>
+            <FloatingLabel label="Ingresa a los participantes">
               <Form.Control
                 name="participantes"
                 type="text"
@@ -113,9 +121,11 @@ function AlumnoAgregarc() {
                 onChange = { handleInputChangec }
                 required
               />
+            </FloatingLabel>
             </Col>
 
             <Col>
+            <FloatingLabel label="Ingresa el lugar">
               <Form.Control
                 name="lugar"
                 type="text"
@@ -124,11 +134,13 @@ function AlumnoAgregarc() {
                 onChange = { handleInputChangec }
                 required
               />
+            </FloatingLabel>  
             </Col>
           </Row>
 
           <Row className="mt-3 mb-3">
             <Col>
+            <FloatingLabel label="Ingresa las observaciones">
               <Form.Control
                 name="obs"
                 type="text"
@@ -137,6 +149,7 @@ function AlumnoAgregarc() {
                 onChange = { handleInputChangec }
                 required
               />
+            </FloatingLabel>  
             </Col>
 
             <Col></Col>
@@ -153,7 +166,7 @@ function AlumnoAgregarc() {
             </Col>
 
             <Col>
-              <Button className="btn btn-info">Cancelar</Button>
+              <Button className="btn btn-danger">Cancelar</Button>
             </Col>
           </Row>
 
